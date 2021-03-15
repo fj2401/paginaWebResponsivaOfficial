@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tutoriales a tu alcance">
+    <meta name="description" content="Acá se pone la descripcion del sitio">
+    <meta name="keywords" content="tutoriales, html, desarrollo web">
+    <title>Diseño Web Responsivo</title>
+    <link rel="icon" href="imagenes/icono.ico">
+    <link href="https://fonts.google.com/specimen/Kaushan+Script?query=kau&selection.family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">    
+    <!-- <script src="correo.module.js"></script>
+    <script src="correo.component.js"></script> -->
+</head>
+<body>
+    <div id="contenedor">
+        <div id="ventanaFlotante">
+            <div id="cerrar"><a href="javascript:cerrar()"><span class="icon-cancel-circle"></span></a></div>
+            <form action="mailto:oscar.founes@gmail.com" name="correo" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="correo">Escriba su correo electr&#243;nico</label><br><br>
+                <input type="email" id="correo" name="email" value="direccionCorreo" ng-model="$ctrl.email"><br>
+                <p class="campoIncorrecto" ng-show="emailnovalido">Por favor, introduzca un correo</p>
+                <input type="button" value="Continuar" ng-click="$ctrl.validarEmail()">
+                <input type="button" value="Cancelar">
+            </form>
+        </div>
+        
+        <!-- SECCION 1 -->
+        <header class="fila">
+
+            <div id="logo" class="col-lg-2 col-md-2 col-sm-4 col-xs-12"> <img src="imagenes/logotipo.png"> </div>
+            <div class="col-lg-7 col-md-6 col-sm-4 col-xs-0"></div>
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-xs-4">
+                    <div id="contacto">
+                        <a href="javascript:abrir()"><img src="imagenes/iconoContacto1.png" title="Enviame un mensaje"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-4">
+                    <div id="sobremi">
+                        <a href="paginas/aviso.html">Sobre mi</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-4">
+                    <div id="inicio">
+                        <a href="index.html"><img src="imagenes/inicio.png"></a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- SECCION 2 -->
+        <div class="fila menuresponsivo">
+            <div class="menu_bar">
+                <a href="paginas/aviso.html" class="bt-menu"><span class="icon-menu"></span>Menu</a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="submenu">
+                        <a href="paginas/aviso.html"><span class="icon-lab"></span>Ciencias<span class="caret">&#711;</span></a>
+                        <ul class="children">
+                            <li><a href="paginas/aviso.html">Vacuna contra el covid<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Misterios de la energ&#237;a oscura<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Diseñar nuevas prote&#237;nas<span class="icon-magic-wand"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="paginas/aviso.html"><span class="icon-spoon-knife"></span>Cocina<span class="caret">&#711;</span></a>
+                        <ul class="children">
+                            <li><a href="paginas/aviso.html">Alb&#243;ndigas caseras<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Arroz con leche<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Natillas<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Prepara una cena especial<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Risotto<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Comida Ecuatoriana<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Ensaladas<span class="icon-magic-wand"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="paginas/aviso.html"><span class="icon-dribbble"></span>Deporte<span class="caret">&#711;</span></a>
+                        <ul class="children">
+                            <li><a href="paginas/aviso.html">Baloncesto<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">F&#250;tbol<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Natac&#237;on<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Pirag&#252;ismo<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Ciclismo<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Buceo<span class="icon-magic-wand"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="paginas/aviso.html"><span class="icon-cogs"></span>Tecnolog&#237;a<span class="caret">&#711;</span></a>
+                        <ul class="children">
+                            <li><a href="paginas/aviso.html">Smartphone<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">SmartTV<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Coches<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Consolas<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Gadgets<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Inteligencia artificial<span class="icon-magic-wand"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="paginas/aviso.html"><span class="icon-tv"></span>Cine<span class="caret">&#711;</span></a>
+                        <ul id="cine" class="children">
+                            <li><a href="paginas/aviso.html">Marvel<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Harry Potter<span class="icon-magic-wand"></span></a></li>
+                            <li><a href="paginas/aviso.html">Piratas del caribe<span class="icon-magic-wand"></span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://saludconlupa.com/noticias/mapa-interactivo-la-epidemia-de-coronavirus-en-tiempo-real/"><span class="icon-earth"></span>Covid-19</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- SECCION 3 -->
+        <div id="seccion3" class="fila">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="titulo">¿Que se te antoja conocer?</h1>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Ciencias</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor">Lo más destacado</p>
+                        <img src="imagenes/ciencias.jpg" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Cocina</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor">Sorprende a los tuyos!!!</p>
+                        <img src="imagenes/cocina.jpg" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Deporte</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor">Activate!!!</p>
+                        <img src="imagenes/deportes.jpg" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Tecno</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor">Ponte al día</p>
+                        <img src="imagenes/tecnologias.jpeg" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Cine</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor">¿Ya las has visto?</p>
+                        <img src="imagenes/cine.jpeg" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Covid 19</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor">Nuestra nueva realidad</p>
+                        <img src="imagenes/covid.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- SECCION 4 -->
+        <div id="seccion4" class="fila">
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                <h1>¿Que vas a encontrar en esta p&#225;gina?</h1>
+                <br>
+                <p>
+                    Esta p&#225;gina se basa en una serie de pequeños articulos de informaci&#243;n referentes 
+                    a las ciencias, cocina, deporte, tecnologias y cine con el objetivo de informar o ayudar a la
+                    gente que la visite de manera que cualquira la pueda entenderla.
+                    <br>
+                    <br>
+                    Espero que te sea de ayuda, gracias por tu visita.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                <h1>Protegete a ti y a los tuyos <span class="icon-wink"></span>.</h1>
+                <br>
+                <div>
+                    <ul>
+                        <h4>Para evitar la propagación de la COVID-19:</h4>
+                        <li>Lávate las manos con frecuencia. Usa agua y jabón o un desinfectante de manos a base de alcohol.</li>
+                        <li>Mantén una distancia de seguridad con personas que tosan o estornuden.</li>
+                        <li>Utiliza mascarilla cuando no sea posible mantener el distanciamiento físico.</li>
+                        <li>No te toques los ojos, la nariz ni la boca.</li>
+                        <li>Cuando tosas o estornudes, cúbrete la nariz y la boca con el codo flexionado o con un pañuelo.</li>
+                        <li>Si no te encuentras bien, quédate en casa.</li>
+                        <li>En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica.</li>
+                    </ul>
+                </div>           
+            </div>
+            <div id="sennalar" class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <img src="imagenes/sennalar.png">
+            </div>  
+        </div>
+
+        <!-- espacio correo -->
+
+        <!-- <div>
+            
+        </div> -->
+        
+        <!-- SECCION 5 -->
+        <!-- menu lateral -->
+        <div class="fila" id="menu-lateral">
+            <div>
+                <a href="https://www.linkedin.com/in/oscarfounes" target="_blank" title="Linkedin"><span class="icon-linkedin"></span></a><br><br>
+                <a href="mailto:oscar.founes@gmail.com" title="Gmail"><span class="icon-mail2"></span></a><br><br>
+                <a href="https://www.facebook.com/oscar.founes" target="_blank" title="Facebook"><span class="icon-facebook2"></span></a><br><br>
+                <a href="https://github.com/fj2401" target="_blank" title="Github"><span class="icon-github"></span></a>
+            </div>
+        </div>
+
+        <footer class="fila">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="https://www.linkedin.com/in/oscarfounes" target="_blank" title="Linkedin"><span class="icon-linkedin"></span></a><a href="mailto:oscar.founes@gmail.com" title="Gmail"><span class="icon-mail2"></span></a><a href="https://www.facebook.com/oscar.founes" target="_blank" title="Facebook"><span class="icon-facebook2"></span></a><a href="https://github.com/fj2401" target="_blank" title="Github"><span class="icon-github"></span></a>&copy;  &#x2652; 	&#211;scar Corporation</div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="main.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>

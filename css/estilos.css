@@ -1,0 +1,490 @@
+
+		/*
+    Estilos glovales
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box; /*no tiene en cuenta el 
+    tamano del borde, los incluye en el ancho total
+    y al tura de los elementos*/
+}
+
+#contenedor{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.fila{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    clear: both; 
+    display: table; 
+    text-align: center;
+    /* border:1px solid black; */
+    filter: none;
+}
+
+[class*="col-"]{
+    float: left;
+    /* border:1px solid black; */
+    padding: 10px;
+    
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:active {
+    color: lightgray;
+}
+
+/* SECCION 1 */
+
+header #logo img{
+   width: 100%;
+   height: 80%;
+   text-align: center;
+}
+
+#sobremi{
+    text-align: center;
+    color: black;
+    margin-top: 20%;
+}
+
+#sobremi a:link {
+    color: cyan;
+}
+
+#sobremi a:visited {
+    color: royalblue;
+}
+
+#sobremi a:active {
+    color: lightskyblue;
+}
+
+header #inicio img{
+    text-align: center;
+   width: 30px;
+   height: 30px;
+   margin-top: 2%;
+}
+header #contacto img{
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* ventana flotante */
+
+#ventanaFlotante{
+    background-color: royalblue;
+    color: white;
+    border-radius: 25px;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    z-index: 1800;
+    left: 40%;
+    top: 25%;
+    display: none;
+}
+
+#ventanaFlotante form{
+    padding-top: 60px;
+}
+
+#cerrar{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+/* SECCION 2 */
+
+.menu_bar{
+    display: none;
+    text-align: left;
+}
+
+nav{
+    /* background: #33BDFF; */
+    background: #33A4FF;
+    z-index: 1000;
+    max-width: 1000px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li .children{
+    display: none;
+    background-color: royalblue;
+    position: absolute;
+    z-index: 1000;
+    width: 150%;
+}
+
+nav ul li .children li{
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+nav ul li .children li a{
+    display: block;
+}
+
+nav ul li .children li a span{
+    float: right;
+    position: relative;
+    top: 3px;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+nav ul li .caret{
+    position: relative;
+    top: 14px;
+    margin-left: 10px;
+    margin-right: 0px;
+    font-size: 30px;
+}
+
+nav ul li:hover{
+    background: #33BDFF;
+}
+
+nav ul li:hover .children{
+    display: block;
+}
+
+nav ul li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+}
+
+nav ul li a span{
+    margin-right: 10px;
+}
+
+@media (max-width:768.5px){
+    body{
+        padding-top: 80px;
+    }
+
+    .menu_bar{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background: #E6344A;
+        z-index:2000;
+    }
+
+    .menu_bar .bt-menu {
+        display: block;
+        padding:20px;
+        color:#fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .menu_bar span{
+        float: right;
+        font-size: 40px;
+    }
+
+    .menuresponsivo nav {
+        width: 80%;
+        position: fixed;
+        top: 80px;
+        right: 100%;
+        margin: 0;
+        overflow: scroll;
+        height: calc(100% - 80px); /* se usa para que el menu desplegable ocupe toda la pantalla restante, restandole lo que ocupa ya el menu para que no ocupe mas espacio del que tiene la pantalla*/
+        
+    }
+
+    .menuresponsivo nav ul li{
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+
+    }
+
+    .menuresponsivo nav ul li a{
+        display: block;
+
+    }
+
+    .menuresponsivo nav ul li .children{
+        width: 100%;
+        position: relative;
+    }
+    
+    .menuresponsivo nav ul li:hover .children{
+        display: none;
+    }
+    
+    .menuresponsivo nav ul li .children li a{
+        margin-left: 20px;
+    }
+
+    .menuresponsivo nav ul li .caret {
+        float: right;
+    }
+
+    header #logo img{
+        width: 50%;
+        /* height: 30%; */
+        text-align: center;
+     }
+
+
+
+}
+
+/* SECCION 3 */
+#seccion3 div h1{
+    text-align: center;
+}
+
+.titulo {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.subtitulo {
+    margin: 0;
+    color: whitesmoke;
+    display: inline;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.sabor { 
+    color: #fff;
+    margin: 7px 0;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0;
+}
+
+.linea-division {
+    width: 80%;
+    height: 2px;
+    background-color: #36221c;
+}
+
+.carousel {
+    min-height: 300px;
+}
+
+.carousel .carousel-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none; /*Sirve para evitar que se seleccionen los textos que hay dentro de las imagenes del carrucel*/
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+}
+/* SECCION 4 */
+
+#seccion4{
+    text-align: left;
+    font-size: 17px;
+    width: 68%;
+}
+
+#seccion4 div div ul{
+    padding-left: 20px;
+}
+
+#seccion4 div div ul li{
+    list-style-type:disc !important;
+}
+
+#sennalar img{
+    width: 100%;
+}
+/* menu lateral */
+
+#menu-lateral{
+    width: 50px;
+    height: 170px;
+    position: fixed;
+    bottom: 250px;
+    right: 0;
+    z-index: 1800;
+    display: block;
+}
+
+#menu-lateral div{
+    background-color: #33A4FF;
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+/* SECCION 5 */
+
+footer{
+    padding: 20px 10px;
+}
+
+footer div{
+    background: #33A4FF;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+
+footer div span{
+    margin-right: 8px;
+}
+
+/* vamos a colocar los puntos de quiebre o corte 
+
+Empezamos por las pantallas grandes - Large(lg)*/
+
+@media(min-width:1200px){
+
+    .col-lg-12{width: 100%;}
+    .col-lg-11{width: 91.66666667%;}
+    .col-lg-10{width: 83.33333333%;}
+    .col-lg-9{width: 75%;}
+    .col-lg-8{width: 66.66666667%;}
+    .col-lg-7{width: 58.33333333%;}
+    .col-lg-6{width: 50%;}
+    .col-lg-5{width: 41.66666667%;}
+    .col-lg-4{width: 33.3333333%;}
+    .col-lg-3{width: 25%;}
+    .col-lg-2{width: 16.666666667%;}
+    .col-lg-1{width: 8.33333333%; }
+    .col-lg-0{display: none;}
+}
+/*Pantalla de escritorio mediano*/
+@media(max-width:1199.5px) and (min-width:992px){
+    .col-md-12{width: 100%;}
+    .col-md-11{width: 91.66666667%;}
+    .col-md-10{width: 83.33333333%;}
+    .col-md-9{width: 75%;}
+    .col-md-8{width: 66.66666667%;}
+    .col-md-7{width: 58.33333333%;}
+    .col-md-6{width: 50%;}
+    .col-md-5{width: 41.66666667%;}
+    .col-md-4{width: 33.3333333%;    }
+    .col-md-3{width: 25%;}
+    .col-md-2{width: 16.666666667%;}
+    .col-md-1{width: 8.33333333%; }
+    .col-md-0{display: none;}
+}
+/*Pantalla de escritorio small*/
+@media(max-width:991.5px) and (min-width:768px){
+
+    .col-sm-12{width: 100%;}
+    .col-sm-11{width: 91.66666667%;}
+    .col-sm-10{width: 83.33333333%;}
+    .col-sm-9{width: 75%;}
+    .col-sm-8{width: 66.66666667%;}
+    .col-sm-7{width: 58.33333333%;}
+    .col-sm-6{width: 50%;}
+    .col-sm-5{width: 41.66666667%;}
+    .col-sm-4{width: 33.3333333%;}
+    .col-sm-3{width: 25%;}
+    .col-sm-2{width: 16.666666667%;}
+    .col-sm-1{width: 8.33333333%; }
+    .col-sm-0{display: none;}
+    header #contacto img{
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        margin-left: 30px;
+    }
+    #menu-lateral{
+        display: none;
+    }
+    #ventanaFlotante{
+        width: 32%;
+        top: 14%;
+        left: 38%;
+    }
+}
+/*Pantalla de escritorio extrasmall*/
+@media(max-width:767.5px){
+
+    .col-xs-12{width: 100%;}
+    .col-xs-11{width: 91.66666667%;}
+    .col-xs-10{width: 83.33333333%;}
+    .col-xs-9{width: 75%;}
+    .col-xs-8{width: 66.66666667%;}
+    .col-xs-7{width: 58.33333333%;}
+    .col-xs-6{width: 50%;}
+    .col-xs-5{width: 41.66666667%;}
+    .col-xs-4{width: 33.3333333%;}
+    .col-xs-3{width: 25%;}
+    .col-xs-2{width: 16.666666667%;}
+    .col-xs-1{width: 8.33333333%; }
+    .col-xs-0{display: none;}
+    .iconos {
+        padding-left: 25%;
+    }
+    #seccion4{
+        text-align: left;
+        width: 95%;
+    }
+    #menu-lateral{
+        display: none;
+    }
+    #ventanaFlotante{
+        width: 60%;
+        height: 13%;
+        top: 8%;
+        left: 23%;
+    }
+}
+
